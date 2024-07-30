@@ -3,7 +3,6 @@
 :root {
     --primary: #801A86;
     --secondary: #861657;
-
 }
 
 * {
@@ -32,7 +31,6 @@ html {
 
 body {
     background: #f7f7f7;
-
 }
 
 section {
@@ -93,7 +91,6 @@ header {
 .btn:hover::before {
     width: 100%;
     left: 0;
-
 }
 
 .btn:hover {
@@ -214,7 +211,7 @@ header .navbar a:hover {
     margin: 1.5rem 0;
 }
 
-.speciality .box-container .box .content h3 {
+speciality .box-container .box .content h3 {
     font-size: 2.5rem;
     color: #333;
 }
@@ -248,7 +245,6 @@ header .navbar a:hover {
     text-align: center;
     flex: 1 1 40rem;
     position: relative;
-
 }
 
 .popular .box-container .box img {
@@ -292,7 +288,6 @@ header .navbar a:hover {
     flex: 1 1 25rem;
     padding: 1rem;
     text-align: center;
-
 }
 
 .steps .box img {
@@ -339,7 +334,6 @@ header .navbar a:hover {
     padding: 2rem;
     padding-top: 5rem;
     text-align: center;
-
 }
 
 .gallery .box-container .box .content h3 {
@@ -372,7 +366,6 @@ header .navbar a:hover {
     flex: 1 1 30rem;
     background: #045372;
     margin-top: 6rem;
-
 }
 
 .review .box-container .box img {
@@ -410,8 +403,9 @@ header .navbar a:hover {
     flex-wrap: wrap;
     gap: 1.5rem;
     border-radius: .5rem;
-    width: 1000px;
-    margin-left: 160px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .order .row form {
@@ -434,21 +428,21 @@ header .navbar a:hover {
     text-transform: none;
     border: .1rem solid rgba(0, 0, 0, .3);
     border-radius: .5rem;
-    width: 100%; 
+    width: 100%;
 }
 
 .order .row form textarea {
     resize: none;
     height: 15rem;
 }
-.order .row form .btn0 {  
-    cursor: pointer; 
-    margin-left: 360px;
-    margin-top: 20px;
+
+.order .row form .btn0 {
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
     width: 240px;
-
+    margin-top: 20px;
 }
-
 
 .footer {
     background-color: #f8f9fa;
@@ -511,11 +505,12 @@ header .navbar a:hover {
 .social-icons {
     display: flex;
     padding: 0;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
+
 .social-icons li {
     margin-right: 10px;
-    list-style: none; 
+    list-style: none;
 }
 
 .social-icons a {
@@ -564,7 +559,6 @@ header .navbar a:hover {
 }
 
 @keyframes float {
-
     0%,
     100% {
         transform: translateY(0rem);
@@ -574,3 +568,115 @@ header .navbar a:hover {
         transform: translateY(3rem);
     }
 }
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    section {
+        padding: 2rem 6%;
+    }
+
+    header {
+        padding: 2rem 6%;
+    }
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    header .navbar {
+        display: none;
+    }
+
+    #menu-bar {
+        display: inline-block;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+
+    .home .content h3 {
+        font-size: 4rem;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+
+    .home .content p {
+        font-size: 1.5rem;
+    }
+
+    .popular .box-container .box img {
+        height: 20rem;
+    }
+
+    .review .box-container .box img {
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .review .box-container .box h3 {
+        font-size: 2rem;
+    }
+
+    .footer>.container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 45%;
+    }
+
+    .home .content h3 {
+        font-size: 3.5rem;
+    }
+
+    .heading {
+        font-size: 2.5rem;
+    }
+
+    .home .content p {
+        font-size: 1.3rem;
+    }
+
+    .popular .box-container .box img {
+        height: 18rem;
+    }
+
+    .review .box-container .box img {
+        height: 8rem;
+        width: 8rem;
+    }
+
+    .review .box-container .box h3 {
+        font-size: 1.8rem;
+    }
+
+    .steps .box h3 {
+        font-size: 2.5rem;
+    }
+
+    .order .row {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .order .row form .btn0 {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
